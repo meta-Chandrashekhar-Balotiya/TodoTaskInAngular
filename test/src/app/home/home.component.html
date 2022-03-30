@@ -1,0 +1,74 @@
+<h1>Todo works!</h1>
+
+
+<button class="btn btn-sm btn-primary rounded-15 m-3" (click) = "openDialog()">Add</button>
+
+<br>
+<div class = "d-flex flex-row bd-highlight mb-3">
+
+  <div class="col-4 m-3 border border-bottom-0 border-top-0">
+    <h2 class = "text-success text-justify p-2 mb-2">High Priority Task</h2>
+    <table class="table table-bordered table-condensed p-5">
+
+        <thead>
+            <th>s.no</th>
+            <th>Task description</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+          <!-- <tr *ngFor = "let task in addtaskservice.taskarr, let i = index"> -->
+            <tr *ngFor = "let task of addtaskservice.taskArr, let i = index">
+                <td>Task {{i + 1}}</td>
+                <td>{{task.Title}}</td>
+                <td><button class="btn btn-sm btn-danger" (click) = "addtaskservice.deleteTask(task)">Delete</button></td>
+            </tr>
+        </tbody>
+
+    </table>
+  </div>
+ 
+   <div class="col-4 m-3 border border-bottom-0 border-top-0">
+    <h2 class = "text-warning text-justify p-2 mb-2">Medium Priority Task</h2>
+    <table class="table table-bordered table-condensed p-5">
+      <thead>
+          <th>s.no</th>
+          <th>Task description</th>
+          <th>Action</th>
+      </thead>
+      <tbody>
+          <tr *ngFor = "let task of addtaskservice.taskArr ,let i = index">
+              <td>Task {{i + 1}}</td>
+              <td>{{task.Title}}</td>
+              <td><button class="btn btn-sm btn-danger" (click) = "deleteTask()">Delete</button></td>
+          </tr>
+      </tbody>
+
+    </table>
+  </div>
+
+<div class="col-4 m-3 border border-bottom-0 border-top-0">
+    <h2 class = "text-danger text-justify p-2 mb-2">Low Priority Task</h2>
+    <table class="table table-bordered table-condensed p-5">
+
+      <thead>
+          <th>s.no</th>
+          <th>Task description</th>
+          <th>Action</th>
+      </thead>
+       <tbody>
+          <tr *ngFor = "let task of addtaskservice.taskArr ,let i = index">
+              <td>Task {{i + 1}}</td>
+              <td>{{task.Title}}</td>
+              <td><button class="btn btn-sm btn-danger" (click) = "deleteTask()">Delete</button></td>
+          </tr>
+      </tbody>
+
+    </table>
+  </div>  
+
+</div>
+
+
+
+
+

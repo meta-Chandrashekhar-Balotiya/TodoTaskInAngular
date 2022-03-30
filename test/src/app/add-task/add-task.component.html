@@ -1,0 +1,31 @@
+<h1>add-task works!</h1>
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmitClick()" class="h-1000">
+
+  <div>
+    <input formControlName="name" class = "input-large search-query" placeholder="Task Title"> 
+  </div>
+
+  <div class="flex-column d-flex my-2">
+    <label> Description: </label>
+    <input formControlName="description" />
+      Please provide a Description.
+  </div>
+
+  <div class="flex-column d-flex my-2">
+      <label> priority: </label>
+      <select
+        class="form-select"
+        aria-label="Default select example"
+        formControlName="priority"
+      >
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      Please Select a priority.
+  </div>
+
+    <button class="btn btn-primary" mat-button (click)="onSubmitClick()">Save</button>
+
+</form>
